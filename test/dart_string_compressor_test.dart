@@ -1,10 +1,9 @@
 import 'package:secure_string_compressor/secure_string_compressor.dart';
-import 'package:secure_string_compressor/string_compressor.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final s = '''
+  test('adds one to input values', () async{
+    const s = '''
     From Wikipedia, the free encyclopedia
 This article is about the fruit. For other uses, see Mango (disambiguation).
 Mango fruits – single and halved
@@ -232,11 +231,11 @@ Contact with oils in mango leaves, stems, sap, and skin can cause dermatitis and
 When mango trees are flowering in spring, local people with allergies may experience breathing difficulty, itching of the eyes, or facial swelling, even before flower pollen becomes airborne.[4] In this case, the irritant is likely to be the vaporized essential oil from flowers.[4] During the primary ripening season of mangoes, contact with mango plant parts – primarily sap, leaves, and fruit skin[4] – is the most common cause of plant dermatitis in Hawaii.[61] 
     
     ''';
-    final compressed = secureCompressSync(
+    final compressed = await secureCompressSync(
         data: s,
         encryptionKey: 'thisismyencryptionkeyforaes-256=',
         initialVector: 'andtheinitialkey');
-    final decompressed = secureDecompressSync(
+    final decompressed = await secureDecompressSync(
         encoded: compressed,
         decryptionKey: 'thisismyencryptionkeyforaes-256=',
         initialVector: 'andtheinitialkey');

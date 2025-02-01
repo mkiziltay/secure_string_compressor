@@ -1,16 +1,16 @@
 name: secure_string_compressor
 description: "A lightweight packgae to compress and decompress strings"
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/mkiziltay/secure_string_compressor
 repository: https://github.com/mkiziltay/secure_string_compressor
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
-  flutter: ">=1.17.0"
+  #flutter: ">=1.17.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
+  #flutter:
+    #sdk: flutter
   encrypt: ^5.0.3
 
 dev_dependencies:
