@@ -6,17 +6,18 @@ repository: https://github.com/mkiziltay/secure_string_compressor
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
-  #flutter: ">=1.17.0"
+  flutter: ">=1.17.0"
 
 dependencies:
-  #flutter:
-    #sdk: flutter
+  flutter:
+    sdk: flutter
   encrypt: ^5.0.3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
+  test: ^1.25.8
 
 # This package supports all platforms listed below.
 platforms:
